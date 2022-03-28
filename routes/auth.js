@@ -8,6 +8,7 @@ router.post("/register", async (req,res)=>{
     const newUser = new User({
         username: req.body.username,
         email: req.body.email,
+        phone: req.body.phone,
         password: CryptoJs.AES.encrypt(
             req.body.password, 
             process.env.SECRET_KEY)

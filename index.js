@@ -22,9 +22,9 @@ app.use("/api/users",userRoute)
 app.use("/api/products",productRoute)
 app.use("/api/carts",cartRoute)
 app.use("/api/orders",orderRoute)
-app.use(express.static(path.join(__dirname,"../client/build/index.html")));
+app.use(express.static(path.join(__dirname,"../client/deploy/index.html")));
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../client/build/index.html"))
+    res.sendFile(path.resolve(__dirname,"../client/deploy/index.html"))
 })
 
 app.listen(process.env.PORT || 5000,()=>{

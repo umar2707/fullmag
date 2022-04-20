@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "server": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",

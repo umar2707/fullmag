@@ -27,14 +27,7 @@ app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"../client/build/index.html"))
     console.log('fronted connected');
 })
-var corsOptions = {
-    origin: 'http://18.117.85.109/',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
-  
-  app.get('/products/:id', cors(corsOptions), function (req, res, next) {
-    res.json({msg: 'This is CORS-enabled for only example.com.'})
-  })
+
 
 app.listen(process.env.PORT || 5000,()=>{
     console.log("Backend server is running ", process.env.PORT || 5000);
